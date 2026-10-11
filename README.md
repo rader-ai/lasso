@@ -69,6 +69,10 @@ These forms follow [Codex skill documentation](https://developers.openai.com/cod
 
 You can name the audience or length: “for a new developer,” “for our product team,” or “in three sentences.” You can also point it at the preceding AI answer. It explains the selected material; it doesn't require a special prompt template.
 
+## Evidence and readiness
+
+An [independent agent desk review](evals/independent-review-0.1.1/README.md) found no material fidelity or instruction-boundary failure in eight original cases and judged the explanation content suitable for a small user pilot. The same reviewer wrote and graded the cases; this was not blind testing or testing with people. Actual host invocation and user benefit remain unverified. The earlier [18-case Astra run](evals/results.md) is separate evidence, with its own limits.
+
 ## Free distribution, with clear limits
 
 The intended home is [rader-ai/lasso](https://github.com/rader-ai/lasso). The goal is a free, reusable package. This draft has no license yet; MIT is proposed for Chris's review. No free-reuse terms have been applied on his behalf. Host subscriptions and model usage may still cost money.

@@ -33,6 +33,12 @@ Scores are **faithfulness / clarity / voice / proportion**, each 0–2. Passing 
 
 The three deductions are wording opportunities, not material behavior failures. No further rule was added merely to eliminate a phrase from one output.
 
+## Independent practical desk audit
+
+A separate agent reviewed commit `e8781b3` and found **no material fidelity or instruction-boundary failure in eight original cases**. It judged the explanation content suitable for a small user pilot. The reviewer wrote, generated and graded those cases in shared context after reading the rubric and earlier reports; this was not blind testing, human testing, or live host verification. Runtime model identity was not independently introspected. Keep this evidence separate from the 18-case Astra run rather than aggregating it into a benchmark score.
+
+The [integration summary and unchanged casebook](independent-review-0.1.1/README.md) preserve inputs, first-pass outputs, judgments and limitations. No concrete behavioral defect justified a skill change. Human benefit, the owner's license choice, and actual conversational invocation remain outstanding; discovery alone does not establish execution.
+
 ## Structural and host validation
 
 - Skill Creator `quick_validate.py`: pass.
