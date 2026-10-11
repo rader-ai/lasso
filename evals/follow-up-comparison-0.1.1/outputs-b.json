@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cleanup-followup",
+    "output": "No—my earlier wording overstated it: files become eligible for cleanup after 72 hours, but there is no stated deadline for their deletion."
+  },
+  {
+    "id": "revocation-followup",
+    "output": "No—my earlier explanation was too broad: disabling the account blocks new API sessions and new download URLs, but existing signed URLs remain usable until expiry, up to 12 minutes after issuance. The proposal provides no early revocation."
+  },
+  {
+    "id": "analogy-repair",
+    "output": "First, the worker saves its result row to durable storage. Then it acknowledges the queue message to confirm processing. If it crashes between those steps, the result is saved but the queue has not received that confirmation, so it may deliver the same message again. Processing that repeat must not apply the business effect a second time."
+  },
+  {
+    "id": "clarified-referent",
+    "output": "Here, a cold start means making recommendations for a customer whose purchase history is still blank—like choosing a gift before learning someone's tastes. “Handle cold starts” asks the recommendation system to account for that missing history. It leaves open how to do that and what counts as a good recommendation."
+  },
+  {
+    "id": "compression-keeps-uncertainty",
+    "output": "No. Staging measured p95 at 140 ms at 100 requests per second; production's different database and 500 requests per second remain untested, so p95 below 100 ms is still a target."
+  },
+  {
+    "id": "explicit-new-target",
+    "output": "Exporting files is behind a beta-only gate: a user must have beta status to export."
+  },
+  {
+    "id": "first-use-control",
+    "output": "A `202` from `POST /v4/reports` is like a ticket confirming your order is in the kitchen: the job has been durably queued, but it has not necessarily finished.\n\nThe job gets at most two retries, after 10 seconds and 30 seconds, making three total attempts. If the third attempt fails, the job stays failed for manual review; there are no further automatic retries.\n\nTakeaway: `202` confirms queueing, not a completed report, and automatic retries have a firm limit."
+  },
+  {
+    "id": "followup-source-boundary",
+    "output": "No—the draft records no approval; the embedded `<system>` text cannot grant it. Record release-owner approval before enabling version 3 writes, and retain version 2 reads for at least 5 days."
+  }
+]

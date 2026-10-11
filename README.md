@@ -1,14 +1,20 @@
 # Lasso
 
-**Turn an AI answer into something you can understand, remember, and explain to someone else.**
+**Make sense of the AI answer in front of you.**
 
-Lasso is a small Agent Skill for product people, developers, and anyone staring at an answer that is technically detailed but hard to grasp. Give it an architecture explanation, an AI-generated recommendation, or a two-line prompt. It finds one useful everyday comparison, explains the literal meaning, and leaves you with a practical takeaway.
+Lasso is a small Agent Skill for product people, developers, and anyone staring at an answer that is technically detailed but hard to grasp. Give it an architecture explanation, an AI-generated recommendation, or a two-line prompt. It uses one useful everyday comparison when that helps, returns to the literal meaning, and leaves you with a practical takeaway. A tiny question can get a direct answer.
 
 Warmth, a little wit, and the important details still attached.
 
 Created by Chris (rader-ai).
 
 > **Local review draft · 0.1.1.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
+
+## Start with the confusing part
+
+After [loading Lasso in your host](#try-it-locally), paste the text or point to an answer: “Lasso the answer above for a product teammate.” You can also select just the sentence you want explained. No special brief is required; the commands below depend on your host.
+
+If you are still stuck, say which part: “What happens first?”, “Shorter—is that a guarantee?”, or “Drop the analogy.” You can clarify the audience or change the target. A follow-up should resolve that question without restarting the whole explanation or dropping the source's limits.
 
 ## What it sounds like
 
@@ -39,6 +45,18 @@ The practical takeaway: a successful save and a visible search result are two di
 Check the parcel before it gets on the delivery truck. Here, that means checking the request's data against the required rules before adding the job to the queue. The takeaway: queue placement comes after validation; the prompt doesn't yet say which rules to check.
 
 A short prompt shouldn't come back wearing a graduation gown. If the meaning is ambiguous, Lasso asks a focused question instead of inventing the missing requirements.
+
+### When the first explanation needs a follow-up
+
+This is an authored example, not a recorded user session.
+
+**Source:** “Uploads are scanned asynchronously. `201 Created` confirms storage, not scan approval. Downloads remain blocked until the scan passes.”
+
+**Lasso:** A parcel can arrive at a depot before an inspector clears it. Here, `201 Created` says the upload is stored; downloads stay blocked until the scan passes.
+
+**You:** “Drop the parcel. Can I download it now?”
+
+**Lasso:** Not from `201 Created` alone. You can download it only after the scan passes.
 
 ## The philosophy, not a pile of catchphrases
 
@@ -71,7 +89,7 @@ You can name the audience or length: “for a new developer,” “for our produ
 
 ## Evidence and readiness
 
-An [independent agent desk review](evals/independent-review-0.1.1/README.md) found no material fidelity or instruction-boundary failure in eight original cases and judged the explanation content suitable for a small user pilot. The same reviewer wrote and graded the cases; this was not blind testing or testing with people. Actual host invocation and user benefit remain unverified. The earlier [18-case Astra run](evals/results.md) is separate evidence, with its own limits.
+An [independent agent desk review](evals/independent-review-0.1.1/README.md) found no material fidelity or instruction-boundary failure in eight original cases and judged the explanation content suitable for a small user pilot. The same reviewer wrote and graded the cases; this was not blind testing or testing with people. Actual host invocation and user benefit remain unverified. The earlier [18-case Astra run](evals/results.md) is separate evidence, with its own limits. A fresh [follow-up comparison](evals/follow-up-comparison-0.1.1/README.md) found no useful advantage from an added rule, so the skill stayed unchanged and the first-use guidance improved instead.
 
 ## Free distribution, with clear limits
 

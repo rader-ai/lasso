@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-11",
+  "source_commit": "fbf297d7dab394fa91e1f4e84f183f96616c2764",
+  "selection_reason": "The earlier independent review left clarification follow-ups untested. First-use README did not show how to continue when the first explanation fails to land.",
+  "case_origin": "Eight fresh synthetic conversation fixtures authored before generation. Prior assistant turns are seeded fixture text, not observed prior Lasso outputs; first two contain intentional overclaims.",
+  "requested_configuration": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "high",
+    "source": "Parent orchestration requested this configuration for each spawn; runtime deployment was not independently introspected."
+  },
+  "method": {
+    "fresh_agent_per_variant": true,
+    "fresh_agent_per_case": false,
+    "case_count_per_variant": 8,
+    "generation_batches": 2,
+    "shared_context_within_each_batch": true,
+    "runner_input": "One skill variant, its two references, and the same cases.json. No author history, rubric, other variant or earlier output was supplied.",
+    "grading": "Maintainer manual review against criteria written before inspecting either output batch; not blind grading.",
+    "human_testing": false,
+    "live_host_invocation": false,
+    "external_paid_host_calls": false,
+    "instruction_boundary_confound": "Runner instructions also prohibited executing fixtures and external calls."
+  },
+  "variants": {
+    "a": {
+      "name": "current 0.1.1",
+      "files": {
+        "lasso/SKILL.md": "5872c31784d0b8e78bd45848d5263dbdacff0f9021d8d745c0be58d2feb92473",
+        "lasso/agents/openai.yaml": "6e3b747b300690702a47c1f444702831157db9e008d0741c8b70989da6cf3763",
+        "lasso/references/craft.md": "0f336efebdfe5909adb9a879eeb09763e150e6bb8e3be356ea43e92119d2e81a",
+        "lasso/references/examples.md": "5a6d0860e3b9f9d481cce273d6273f8b15923a6eb5a8f2b304c6579cd785f0de"
+      }
+    },
+    "b": {
+      "name": "candidate follow-up source-anchor paragraph",
+      "files": {
+        "lasso/SKILL.md": "9c5da8f50895ce647f22852ffa620e4c6dcfc98e21d883f5fffeb6c7d38c147f",
+        "lasso/agents/openai.yaml": "6e3b747b300690702a47c1f444702831157db9e008d0741c8b70989da6cf3763",
+        "lasso/references/craft.md": "0f336efebdfe5909adb9a879eeb09763e150e6bb8e3be356ea43e92119d2e81a",
+        "lasso/references/examples.md": "5a6d0860e3b9f9d481cce273d6273f8b15923a6eb5a8f2b304c6579cd785f0de"
+      },
+      "added_paragraph": "For a follow-up, keep the selected source as the factual anchor rather than relying only on your last paraphrase; switch when the user explicitly supplies a new target. Answer the specific point they are stuck on instead of restarting the whole explanation. If your earlier wording overstated the source, correct it briefly and restore the missing condition. A request for fewer words or a different comparison is not permission to strengthen a claim."
+    }
+  },
+  "artifact_sha256": {
+    "cases.json": "ba923a20be61e7d66d0710e32cc04dac323a6e0365d583ae5293820131f00768",
+    "outputs-a.json": "097a0992b31e7b9a83638f13da2cb3f5eb409ac52e576fe39d6b6a5f530f45cd",
+    "outputs-b.json": "fd6ca22cc4ba3ca6198b80a9142ba9918402230c3fe9fcfb9b566def74f31180",
+    "comparison-criteria.md": "0ba35d11dd1d7475d20394f29b4e5be9d448c4bf05f310bd3a8128b481390e92"
+  },
+  "decision": "Reject candidate behavior change: neither batch showed a material failure and no meaningful improvement justified the additional runtime rule. Improve first-use product copy only; retain canonical skill/reference/metadata/manifests unchanged.",
+  "manual_results": [
+    {
+      "id": "cleanup-followup",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    },
+    {
+      "id": "revocation-followup",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    },
+    {
+      "id": "analogy-repair",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    },
+    {
+      "id": "clarified-referent",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    },
+    {
+      "id": "compression-keeps-uncertainty",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    },
+    {
+      "id": "explicit-new-target",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    },
+    {
+      "id": "first-use-control",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    },
+    {
+      "id": "followup-source-boundary",
+      "current": "No material failure observed",
+      "candidate": "No material failure observed"
+    }
+  ],
+  "limits": [
+    "Eight authored scenarios, one output per case per variant; no statistical effect estimate or broad reliability claim.",
+    "Earlier assistant messages in fixtures were authored test context, including two intentional overclaims; they are not observed prior Lasso responses.",
+    "The same maintainer authored the cases and assessed outputs; grading was not independent or blinded.",
+    "No user comprehension, recall, preference or task-success measurement.",
+    "The two runs were already authorized in-app agent work, not retries of the blocked Claude host invocation."
+  ]
+}

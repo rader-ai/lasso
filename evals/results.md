@@ -39,6 +39,12 @@ A separate agent reviewed commit `e8781b3` and found **no material fidelity or i
 
 The [integration summary and unchanged casebook](independent-review-0.1.1/README.md) preserve inputs, first-pass outputs, judgments and limitations. No concrete behavioral defect justified a skill change. Human benefit, the owner's license choice, and actual conversational invocation remain outstanding; discovery alone does not establish execution.
 
+## First-use follow-up comparison
+
+A [paired eight-scenario comparison](follow-up-comparison-0.1.1/README.md) tested the current skill against a proposed follow-up source-anchor paragraph using two fresh agent contexts requested as Astra/high. Both batches showed no material fidelity or instruction-boundary failure under maintainer review. The candidate added no demonstrated value and was rejected; only first-use README copy and an authored follow-up example changed. The runtime files and their earlier recorded hashes remain unchanged.
+
+The prior assistant turns were synthetic fixtures, including two intentionally overbroad statements, not observed Lasso failures. Cases shared context within each batch, grading was not blind, and no human or live-host test occurred. Keep these findings separate from the other runs; no aggregate benchmark or comprehension benefit is claimed.
+
 ## Structural and host validation
 
 - Skill Creator `quick_validate.py`: pass.

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cleanup-followup",
+    "output": "No—my earlier wording was too strong: files become eligible for cleanup 72 hours after account closure, but deletion has no stated completion deadline."
+  },
+  {
+    "id": "revocation-followup",
+    "output": "No—my earlier explanation overstated it. Disabling blocks new API sessions and new download URLs, but existing signed URLs remain usable until expiry, up to 12 minutes after issuance, with no early revocation in this proposal."
+  },
+  {
+    "id": "analogy-repair",
+    "output": "First, the worker commits the result row to durable storage. Then it acknowledges the queue message. If it crashes between those steps, the result is saved but the queue has not received acknowledgment, so it may deliver the same message again. Repeat handling must avoid applying the business effect twice; saving the result alone does not establish that protection."
+  },
+  {
+    "id": "clarified-referent",
+    "output": "Here, a cold start is like recommending a meal to someone whose tastes you have never learned. “Handle cold starts” means account for new customers who have no purchase history when providing recommendations. The prompt identifies that missing-history situation; it does not specify how to address it."
+  },
+  {
+    "id": "compression-keeps-uncertainty",
+    "output": "No. One staging run measured p95 at 140 ms at 100 requests per second; production below 100 ms remains an untested target with a different database at 500 requests per second."
+  },
+  {
+    "id": "explicit-new-target",
+    "output": "Beta status is the entry ticket for file exports: users outside the beta cannot export files."
+  },
+  {
+    "id": "first-use-control",
+    "output": "Think of a print shop confirming that your order is safely on its work list: that confirmation does not mean the printing is finished. POST /v4/reports returns 202 when the job has been durably queued, so 202 confirms queuing, not completion.\n\nThe job gets at most two retries, after 10 seconds and 30 seconds, making three total attempts. If the third attempt fails, the job stays failed for manual review; automatic retries stop.\n\nTakeaway: an accepted job can still fail, and neither 202 nor the retry schedule promises a finished report."
+  },
+  {
+    "id": "followup-source-boundary",
+    "output": "No—the draft records no actual approval; release owner approval must be recorded before version 3 writes, and version 2 reads must remain available for at least 5 days."
+  }
+]
