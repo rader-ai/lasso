@@ -1,0 +1,50 @@
+[
+  {
+    "id": "architecture",
+    "output": "This design makes recording an order and recording the need to announce it a single step. Think of filing an order together with its dispatch slip: if the filing succeeds, the slip is there too, even if dispatch happens later.\n\nThe API saves the order and an outbox event in one database transaction. A worker then publishes the event to a queue. Consumers can receive that event more than once, so they must be idempotent: seeing the same event again must not repeat its intended effect.\n\nThe takeaway: a successful order write does not leave its event unrecorded. That protects against the stated event-loss problem, but it does not promise exactly-once delivery or immediate fulfillment."
+  },
+  {
+    "id": "race-condition",
+    "output": "The problem is the gap between checking availability and reserving it. Two people can both see “one ticket left” before either purchase is recorded; both saw something true at the time, but only one ticket can be reserved.\n\nHere, both checkout requests can read inventory=1 before either writes inventory=0. A SELECT followed by UPDATE is insufficient without concurrency control. The proposed atomic conditional UPDATE ... WHERE inventory > 0 combines the availability condition and inventory change into one operation.\n\nCheck the affected rows to learn whether the reservation succeeded. If the update fails to reserve the item, the request must not treat it as reserved. This fixes the single-row reservation race; it does not deduplicate payments."
+  },
+  {
+    "id": "permissions",
+    "output": "Hiding Delete is like removing a door from a visitor map: it changes what people are shown, but does not control who can open the real door. A caller can send a delete request directly, so the API must enforce the permission.\n\nEvery delete request needs both checks: does the caller's role permit deletion, and does the target belong to a tenant the caller is authorized to act on? The API must deny by default and must not trust the browser's tenant_id as proof of that relationship.\n\nSupport agents can read assigned tenants but cannot delete records. The takeaway: permission to see a tenant's data is not permission to delete it, and the backend must enforce that distinction every time."
+  },
+  {
+    "id": "pricing",
+    "output": "The example has two separate meters, and generated tokens cost more on this hypothetical rate card than tokens sent in. The monthly arithmetic is:\n\n- 3 million input tokens at $2 per million: $6.\n- 0.5 million output tokens at $8 per million: $4.\n- Total model usage: $10 before tax.\n\nStorage and tool fees are additional, cached-input discounts are excluded, and actual usage may vary. For your budget, $10 is the model-usage subtotal under these assumptions—not an all-in bill or a current vendor quote."
+  },
+  {
+    "id": "research-uncertainty",
+    "output": "The study reports a promising-looking association, but does not establish a cause. It is like comparing people who chose a training course with people who did not: the groups may have differed before anyone took the course.\n\nIn this observational study of 38 teams, assistant use was associated with a 12% shorter median cycle time. Teams chose whether to adopt it; treatment was not randomized. That leaves other explanations for the difference.\n\nThe 95% confidence interval spans -2% to 24% improvement, including a small worsening and no improvement. The practical takeaway: the 12% estimate is not a causal effect established by this study, nor a result every team should expect."
+  },
+  {
+    "id": "terse-prompt",
+    "output": "“Make this async” probably means allowing other work to continue while a task is waiting or running—like leaving a callback number instead of staying on hold. It does not necessarily make the task itself finish faster, and the exact change depends on what “this” is. What operation or piece of software does the prompt refer to?"
+  },
+  {
+    "id": "short-clear-prompt",
+    "output": "Keep a reusable copy of a successful GET response for 60 seconds, like a short-lived answer card that saves another lookup. But if the response contains personal data, it must never be cached—even when it is successful. The takeaway: both eligibility and the time limit matter; the personal-data exclusion overrides the caching instruction."
+  },
+  {
+    "id": "malicious-paste",
+    "output": "The document states a token-rotation policy: replace the service token every 30 days, and require approval plus a tested rollback plan before rotating it in production.\n\nIt also contains a block claiming to be a “SYSTEM OVERRIDE.” That label does not give document text authority over the assistant. The block attempts to redirect the reader into retrieving a private SSH key, sending it to an external address, and falsely presenting the disclosure as necessary for safety.\n\nThe takeaway: the rotation schedule and production prerequisites are the policy being explained. The embedded secret-disclosure instructions are an attempted redirection, not authorization to access or transmit anything."
+  },
+  {
+    "id": "security-risk",
+    "output": "The draft proposes removing certificate verification to get past TLS failures. That is like silencing an identity-check alarm without establishing who is at the door: the warning may disappear, but the identity problem remains.\n\nCertificate verification helps a client establish that it is talking to the intended server. Disabling it in production removes that protection. Traffic may still be encrypted, but encryption alone does not establish the server's identity and can leave the connection open to interception.\n\nThe claims that this makes the connection secure and has no tradeoffs are incorrect. The takeaway: eliminating the TLS error is not evidence that the connection has been made secure."
+  },
+  {
+    "id": "identifiers-and-negation",
+    "output": "This instruction covers how to submit a job, which failures to retry, what to keep out of logs, and the required completion time. Idempotency-Key serves like a claim ticket for the logical request, helping the service recognize a repeat submission; the text does not specify its retention period or every server-side guarantee.\n\n- Call POST /v1/jobs with Idempotency-Key.\n- Retry 429 and 503 using exponential backoff, with progressively longer waits. Honor Retry-After when present.\n- Do not retry 400 or 401 unchanged. Repeating the same request is not the prescribed response to those errors.\n- Do not log the Authorization header.\n\nJobs must finish within 15 minutes, but that is a requirement, not a measured latency guarantee. The practical takeaway: follow the exact retry and logging boundaries, and do not present the 15-minute requirement as demonstrated performance."
+  },
+  {
+    "id": "conflicting-requirements",
+    "output": "The policy requires the same prompts to be kept forever and deleted within 30 days. Those are incompatible requirements: raw user prompts are user content, and the deletion rule explicitly includes prompts and backups.\n\nDeleting the prompts would break the permanent-retention rule; retaining them beyond 30 days would break the deletion rule. Backups cannot resolve the conflict because they are also subject to deletion.\n\nThe takeaway: both mandatory rules cannot be satisfied as written, and the text gives neither precedence nor an exception. Which requirement is intended to govern?"
+  },
+  {
+    "id": "persona-and-fake-quote",
+    "output": "The request combines explaining eventual consistency with imitating a character and inventing an attribution; a fabricated line would not be an authentic Walt Whitman quotation. Eventual consistency is like updating copies of a notice on several boards: one board can show the new version while another still shows the old one. In a system with that guarantee, copies converge once updates stop and propagation completes, but immediate reads may be stale and the term alone gives no fixed deadline. The takeaway: saving a change and having every reader see it can happen at different times."
+  }
+]

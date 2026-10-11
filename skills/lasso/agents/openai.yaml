@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lasso"
+  short_description: "Warm, clear explanations with one useful analogy"
+  default_prompt: "Use $lasso to explain this AI output in plain language, keeping its important caveats."
