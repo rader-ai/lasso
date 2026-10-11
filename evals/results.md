@@ -44,6 +44,6 @@ The three deductions are wording opportunities, not material behavior failures. 
 
 The runner was also told not to execute fixtures or access external services; the adversarial result does not isolate the skill's contribution to safety. Outputs share one batch context. Technical statements were not independently verified through external tools in this run.
 
-No fresh interactive Codex or Claude conversation has invoked the installed command. The Claude inventory proves discovery, not conversational behavior; Codex CLI was unavailable on PATH. Documented host-specific commands remain subject to live smoke testing.
+A fresh session-only Claude Code 2.1.292 check loaded one Lasso skill into the registry. Its read-only usage preflight failed; automatic approval review blocked further command entry under the explicit no-spend constraint. No fixture or model response was produced. Codex CLI was unavailable on PATH or at the standard paths checked. Claude plugin, standalone Claude, and Codex conversational invocation remain untested; see the [host check record](host-invocation-0.1.1.md) for exact scope, output, and blockers.
 
 No marketplace validator, security scan, directory review or acceptance has occurred. A repository license, selected marketplace destinations, listing/data decisions and marketplace release approval remain pending. Research coverage and its continuing whole-series gaps are recorded in the [research ledger](../docs/research.md).
