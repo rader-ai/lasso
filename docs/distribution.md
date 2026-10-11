@@ -1,6 +1,6 @@
 # Distribution plan — local review draft
 
-Checked against first-party documentation on 2026-10-11. No package has been pushed, registered, submitted, installed globally, or published by this task. The goal is a free public skill; publication is still a separate decision.
+Checked against first-party documentation on 2026-10-11. Chris authorized publishing the reviewed source to the existing GitHub repository after local validation. No marketplace registration, submission, global install, or directory publication has occurred. The goal remains a free reusable skill; licensing and marketplace release are separate decisions.
 
 ## One skill, small wrappers
 
@@ -18,7 +18,7 @@ Other Agent Skills hosts may load the canonical folder, but commands and support
 
 | Destination | What publication involves | Current status |
 | --- | --- | --- |
-| GitHub `rader-ai/lasso` | Commit reviewed files and a chosen license, then authorize a push; confirm intended visibility. | Cloned empty repo; local draft only. |
+| GitHub `rader-ai/lasso` | Push reviewed original source to the exact existing remote, preserving author identity and remote changes. A license is still needed for explicit free-reuse terms. | Source push authorized; the delivery receipt records the verified remote commit. |
 | skills.sh | Once the repo is public, users can install through the skills CLI. Its FAQ says leaderboard discovery follows installations reported through aggregate telemetry. This is not a curated listing submission or guaranteed prominence. | No CLI run, install, telemetry choice, or listing claim. |
 | OpenAI plugin directory | Upload a ZIP under a verified developer identity, address validation/review requirements, complete attestations, then publish an approved version. Skills-only packages do not need MCP review cases or an MCP demo recording. | Portable manifest prepared; account, listing and review actions pending. |
 | Anthropic plugin directory | Validate the selected plugin folder; connect an authorized GitHub account for submission; complete review. Public release requires a public repository. README and license are required by its checklist. | Claude wrapper prepared; license and submission decisions pending. |
@@ -32,6 +32,6 @@ Sources: [skills.sh FAQ](https://www.skills.sh/docs/faq), [OpenAI submission](ht
 - **Public identity and data:** Confirm publisher display name/contact, listing copy, and any support/privacy/terms URLs the chosen destination requires. The package has no telemetry or service, but host providers process supplied prompts under their own settings. Do not invent a privacy policy or claim local-only processing.
 - **Branding and evidence:** Approve the project name and independent, unaffiliated positioning. Confirm the research coverage statement and all original examples. Include no scripts, transcripts, stills, logos, likenesses, or supposed quotations from the show.
 - **Release quality:** Complete per-host conversational smoke tests; record versions, outputs and any failures. Resolve the missing license before calling this ready for marketplace submission.
-- **Final authorization:** Only after those decisions, approve commit/push, upload/submission and any required terms separately. Do not create accounts, accept terms, enable webhooks, or spend money as a packaging step.
+- **Remaining authorization:** Local commits and the reviewed GitHub source push are authorized. Marketplace upload/submission, directory publication and required terms still need separate approval. Do not create accounts, accept terms, enable webhooks, or spend money as a packaging step.
 
 “Free skill” means no separate fee planned for this package. Users may still need a paid host account or incur model usage charges. Nothing in this draft promises directory acceptance, endorsement, or comprehension for every reader.

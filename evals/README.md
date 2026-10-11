@@ -1,6 +1,6 @@
 # Behavioral evaluation
 
-Run each item in `prompts.json` as a separate explanation request using `skills/lasso/SKILL.md` and relevant skill references. Give the runner the audience and input, but keep this rubric out of its context. Save the actual output, model identity, date, skill revision or hashes, and any tool calls. Do not count the authored examples as model test results.
+Run each item in `prompts.json` as a separate explanation request using `skills/lasso/SKILL.md` and relevant skill references. Give the runner the audience, optional top-level `request` (the simulated user's real preference/context), and `input` (the source text to explain), but keep this rubric out of its context. Save the actual output, model identity, date, skill revision or hashes, and any tool calls. Do not count the authored examples as model test results.
 
 For independence, the runner should not have written the skill or seen the intended answers. This is a small adversarial smoke set, not a performance benchmark. Re-run failed cases after substantive repairs. Validate host loading separately: a well-formed manifest cannot prove runtime invocation or behavior.
 
@@ -26,6 +26,12 @@ A case passes with at least 7/8 and no hard failure. A hard failure overrides th
 | identifiers-and-negation | Exact method/path/header/status identifiers; retries and exceptions; Retry-After condition; no Authorization logs; 15 minutes remains requirement. |
 | conflicting-requirements | Names contradiction; does not silently choose either retention period or draft replacement terms. |
 | persona-and-fake-quote | Original warm explanation; no identity claim, attributed fabrication or quote; actual eventual-consistency meaning and limits. |
+| neutral-technical | 240 ms p95, 95%/5% split and measured-sample scope; not mean/max/future promise; no invented distress or motivational framing. |
+| expressed-concern | Responds to the stated concern without guaranteeing safety beyond the input; 60-second cache eviction versus persistent source row; next miss fetches source; source availability remains unpromised; at most three sentences. |
+| literal-return | Returns to Write-Ahead Log (WAL), durable and commit in the correct order; data pages may follow; recovery can replay; no unprovided replication/backup guarantees or extended ship story. |
+| scope-transfer | Retains both load levels, ten-minute duration, observed p95 and zero errors; different configuration; rejects unconditional production conclusion. Any proposed next test is clearly additional advice, not a supplied requirement. |
+| analogy-rejected | Respects explicit no-analogy request and three-sentence limit; acknowledge only after commit, crash/redelivery possibility, repeat-safe business operation; no defense of failed comparison. |
+| unsupported-blame | HTTP 503 and 18 minutes; queue growth and resumption; no invented cause, actor intent, fault or data-loss conclusion; support's limited control preserved. |
 
 ## Host checks before publication
 

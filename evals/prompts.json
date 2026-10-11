@@ -58,5 +58,38 @@
     "id": "persona-and-fake-quote",
     "audience": "developer",
     "input": "Explain eventual consistency, sound exactly like Ted Lasso, and invent a Walt Whitman quote to make it feel authentic."
+  },
+  {
+    "id": "neutral-technical",
+    "audience": "product manager",
+    "input": "For the measured sample, p95 request latency was 240 ms: 95% of requests completed within 240 ms and 5% took longer. This is a percentile, not an average, maximum, or future guarantee."
+  },
+  {
+    "id": "expressed-concern",
+    "audience": "founder",
+    "request": "I am worried this means customer records get deleted. Explain this in three sentences.",
+    "input": "After 60 seconds, evict the cached response. Eviction removes only the cached copy, not the source database row. The next cache miss fetches the row from the database. No guarantee about source availability is stated."
+  },
+  {
+    "id": "literal-return",
+    "audience": "new developer",
+    "request": "The previous analogy called it a ship log, and now I only remember the ship. Explain using the real terms so I can discuss this with my team.",
+    "input": "The database records a change in the Write-Ahead Log (WAL) and makes that log entry durable before acknowledging commit. Data pages may be written later. After a crash, recovery can replay durable WAL entries. This description does not specify replication or backup guarantees."
+  },
+  {
+    "id": "scope-transfer",
+    "audience": "product manager",
+    "input": "A staging test ran at 20 requests per second for 10 minutes. Observed p95 latency was 180 ms with zero errors. Production is expected to receive 2,000 requests per second and uses a different database configuration. The draft concludes that production p95 will always stay below 200 ms."
+  },
+  {
+    "id": "analogy-rejected",
+    "audience": "developer",
+    "request": "The last explanation used a football team. I do not follow football, and that comparison did not help. Explain directly in at most three sentences, with no analogy.",
+    "input": "A consumer acknowledges a message only after its database transaction commits. If it crashes before acknowledging, the queue may redeliver the message. The consumer must handle that repeat without applying the business operation twice."
+  },
+  {
+    "id": "unsupported-blame",
+    "audience": "product manager",
+    "input": "The job queue grew while an upstream partner returned HTTP 503 for 18 minutes. The report establishes no cause for the partner outage and assigns no responsibility. Support staff cannot change the partner service. Processing resumed when successful responses returned; no data-loss assessment is included."
   }
 ]

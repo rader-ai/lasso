@@ -8,7 +8,7 @@ Warmth, a little wit, and the important details still attached.
 
 Created by Chris (rader-ai).
 
-> **Local review draft · 0.1.0.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
+> **Local review draft · 0.1.1.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
 
 ## What it sounds like
 
@@ -42,11 +42,11 @@ A short prompt shouldn't come back wearing a graduation gown. If the meaning is 
 
 ## The philosophy, not a pile of catchphrases
 
-The research starts with context: who needs help, what is unfamiliar, and what the comparison changes for the listener. Selected passages from *Pilot*, *Make Rebecca Great Again*, and *Rainbow* show both useful connections and failure modes. A laugh can happen without comprehension. Reassurance can reopen uncertainty without proving a happy outcome. A clever line can create more decoding work—or miss that someone needs a direct response.
+The research starts with context: who needs help, what is unfamiliar, and what the comparison changes for the listener. It includes the complete extracted text of three dated shooting drafts—*Pilot*, *Make Rebecca Great Again*, and *Rainbow*—plus nine substantive official clip transcript-panel readings and seven firsthand craft interview sources. They show both useful connections and failure modes. A laugh can happen without comprehension. Reassurance can reopen uncertainty without proving a happy outcome. A clever line can create more decoding work—or miss that someone needs a direct response.
 
-Our adaptation is **one comparison → literal meaning → useful takeaway**. The comparison has to match the mechanism. The literal explanation carries the limits. The takeaway stays inside what the input actually supports.
+Our adaptation is **understand the need → one useful comparison → literal meaning → grounded takeaway**. The comparison has to match the mechanism. The literal explanation gives you the actual terms and limits, so you can use the idea without retelling the story. The takeaway stays inside what the input supports. A stated worry can deserve acknowledgement; an ordinary technical question doesn't need invented emotions.
 
-That sequence is our design, informed by source analysis. It is not a formula claimed by the writers. Warmth, humor, analogy, and confidence are separate choices; the skill can turn one down without losing the others. See the [craft notes](skills/lasso/references/craft.md) and [research ledger](docs/research.md) for inspected scenes, creator commentary, provenance and gaps. This is a limited sample, not a comprehensive review of every script or transcript.
+That sequence is our design, informed by source analysis. It is not a formula claimed by the writers. Warmth, humor, analogy, and confidence are separate choices; the skill can turn one down without losing the others. Understanding an explanation doesn't require agreeing with its recommendation. See the [craft notes](skills/lasso/references/craft.md) and [research ledger](docs/research.md) for inspected scenes, creator commentary, provenance and gaps. Full-script coverage is 3 of 44 catalogued episodes. Clip captions add partial evidence, not full episodes or verified visual performances. Full broadcast cuts were not reviewed or compared with the drafts.
 
 ## What stays intact
 
