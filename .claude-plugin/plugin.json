@@ -1,6 +1,6 @@
 {
   "name": "lasso",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Make AI output click through a warm everyday observation, with plain-language detail when needed.",
   "repository": "https://github.com/rader-ai/lasso",
   "author": {

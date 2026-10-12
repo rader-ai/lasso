@@ -8,7 +8,7 @@ Warmth, a little wit, and the important details still attached.
 
 Created by Chris (rader-ai).
 
-> **Review draft · 0.1.4.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
+> **Review draft · 0.1.5.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
 
 ## Start with the confusing part
 
@@ -107,7 +107,7 @@ You can name the audience or length: “for a new developer,” “for our produ
 
 ## Evidence and readiness
 
-The [0.1.3 and 0.1.4 validation report](evals/results.md) separates structural checks and author-reviewed examples from actual model evaluation. 0.1.3 adds a voice rule (make the final turn a smile, not a sermon) and two regression fixtures for it. A model-graded run of the 26-case suite against 0.1.4 passed 22 of 26 with no hard failures ([run report](evals/run-0.1.4/README.md)). Graders and runners are the same model family; no human comprehension test has been run. The [0.1.2 report](evals/results-0.1.2.md) is archived.
+The [validation report](evals/results.md) separates structural checks and author-reviewed examples from actual model evaluation. 0.1.3 adds a voice rule (make the final turn a smile, not a sermon) and two regression fixtures for it. A model-graded run of the 26-case suite against 0.1.4 passed 22 of 26 with no hard failures ([run report](evals/run-0.1.4/README.md)); after the 0.1.5 fixes, all five failed or voice-capped cases pass on re-run ([re-run report](evals/run-0.1.5/README.md)). Graders and runners are the same model family; no human comprehension test has been run. The [0.1.2 report](evals/results-0.1.2.md) is archived.
 
 The [18-case Astra run](evals/results-0.1.1.md), [eight-case desk review](evals/independent-review-0.1.1/README.md), and [follow-up comparison](evals/follow-up-comparison-0.1.1/README.md) apply to 0.1.1. Their outputs remain preserved; they do not validate this changed response style. Human comprehension and conversational host invocation remain unverified.
 

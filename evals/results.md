@@ -1,4 +1,4 @@
-# Validation report: 0.1.3 and 0.1.4
+# Validation report: 0.1.3 to 0.1.5
 
 Date: 2026-10-12. This revision keeps the 0.1.2 response design (a freestanding everyday observation, with fuller explanation and consequential caveats available) and adds a voice rule: make the final turn a smile, not a sermon. It also tells the skill how to handle a voice miss (“doesn't sound like Ted”) separately from a comprehension miss.
 
@@ -26,10 +26,14 @@ These 26 cases were not run against 0.1.3 itself; see the 0.1.4 run below.
 
 The 26-case suite was run against 0.1.4 with fresh runner agents and graded by separate agents (same model family). **22 of 26 passed, with no hard failures.** Failures: pricing, terse-prompt, spreadsheet-query-depth, voice-miss-follow-up. See the [run report](run-0.1.4/README.md) for method, limits, raw outputs and grades. These are model grades, not human judgment.
 
+## 0.1.5: voice rule clarified, failed cases re-run
+
+The voice rule now allows silly, harmless "or you're just..." endings and rules out endings implying waste, trouble, loss, or blame, and warns against reusing an example's sentence shape. Observations must be literally true of the input and of their own scene, and time periods join the preserve list. All five cases that failed or were voice-capped in 0.1.4 pass on re-run (pricing on its third attempt). See the [0.1.5 re-run report](run-0.1.5/README.md). The other 21 cases were not re-run.
+
 ## Structural checks
 
 - Skill frontmatter (name, description) present; no unfinished-scaffold markers: passed with a local standard-library check.
-- All package JSON parsed. Both manifests agree on name, description, and version `0.1.4`.
+- All package JSON parsed. Both manifests agree on name, description, and version `0.1.5`.
 - 26 unique fixture ids; the original 24 fixture records are unchanged (parsed and compared to the previous commit).
 - Local Markdown link targets resolve.
 - No license, runtime dependency, hook, MCP server, or executable helper added.
@@ -42,4 +46,4 @@ The [0.1.2 report](results-0.1.2.md), [0.1.1 report](results-0.1.1.md), and [0.1
 
 ## Remaining checks
 
-Settle the voice-rule ambiguity raised by the run (whether the approved bike ending counts as an "or else" beat), then re-run the failed cases. Watch whether the new voice rule makes lines warmer without drifting into folksiness, catchphrases, or forced jokes, and whether serious cases still get plain, direct risk statements. Human review of whether associations land, and conversational invocation in each advertised host, remain unverified.
+Decide the two rubric questions in the [0.1.5 report](run-0.1.5/README.md), and re-run the full suite. Watch whether the new voice rule makes lines warmer without drifting into folksiness, catchphrases, or forced jokes, and whether serious cases still get plain, direct risk statements. Human review of whether associations land, and conversational invocation in each advertised host, remain unverified.

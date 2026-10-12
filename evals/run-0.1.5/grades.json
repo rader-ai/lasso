@@ -1,0 +1,106 @@
+[
+ {
+  "id": "pricing",
+  "inferred_relationship": "A total you work out ahead of time from a list is real but partial: costs (parking) and discounts (coupons) that only show up at checkout can move the final number either way.",
+  "faithfulness": 0,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": "Dropped a material boundary: the input's time period ('per month') never appears. The output says '3 million input tokens ... 0.5 million output tokens' and '$10' without saying monthly, which is the budgeting unit for this audience and is listed in the case invariants.",
+  "deductions": [
+   "faithfulness: the monthly period is missing everywhere ('The $10 is model usage only...'), so a budget reader can't tell whether $10 is per month, per project or one-time. Everything else holds: hypothetical, $6 + $4 = $10, before tax, storage and tool fees extra, cached discounts excluded, usage may vary."
+  ],
+  "total": 8,
+  "max": 10,
+  "pass": false,
+  "attempt": 2
+ },
+ {
+  "id": "terse-prompt",
+  "inferred_relationship": "You don't have to sit and wait for a slow job to finish. You start it, do other things, and deal with it when it signals it's done.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "notes": "Gives a conditional meaning ('usually means'), adds no framework and does no rewrite, and asks one useful clarifying question about what 'this' is. The general caveats (async doesn't speed up the slow step, failure handling still has to be decided) are accurate general knowledge and say nothing specific about the user's system. The decoding paragraph explains the concept, not the dryer, so the image stays independent. Laundry is a familiar async picture, but it is a specific scene, not a generic maxim.",
+  "total": 10,
+  "max": 10,
+  "pass": true,
+  "attempt": 1
+ },
+ {
+  "id": "spreadsheet-query-depth",
+  "inferred_relationship": "Asking for just a slice of the information gets you that slice, and the original source is left exactly as it was.",
+  "faithfulness": 1,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "faithfulness: 'a typo or an unsupported form won't quietly return partial data. It just fails' goes beyond the input. The input only says an invalid query (unsupported syntax) returns an error. It says nothing about unsupported operations, which it explicitly leaves unlisted, or about partial results, so this reads as a guarantee the source doesn't give."
+  ],
+  "notes": "All other invariants survive: requested rows and columns, a separate result, unchanged source cells, the syntax and error condition, and no timing guarantee or operations list. It correctly flags result staleness as unspecified rather than claiming either way. There is no prop-by-prop mapping.",
+  "total": 9,
+  "max": 10,
+  "pass": true,
+  "attempt": 1
+ },
+ {
+  "id": "warm-turn-observation",
+  "inferred_relationship": "Each round starts from where the last one ended and gets a bit further. A set limit ('five more') ends it, and the ending is a shared, happy countdown rather than a cutoff.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "notes": "The loop feeds forward (each push starts from where the last left off), progress is visible (a little higher), and the stop condition can be recovered as a maximum number of tries ('five more'). The last beat, 'suddenly everybody on the playground can count', is a kind, playful surprise with no penalty, warning or 'someone who never' moral. It is warm and Ted-like in spirit with no catchphrase. It does not reuse the bike line's 'or you're just...' shape, though it revisits the swing scene from the 0.1.4 run with a much better ending. Minor watch: the counting punchline is slightly oblique (kids counting along), but it doesn't block recovery. It omits 'runs forever and wastes compute', which is fine for a short take and avoids a warning ending. Nothing is untrue inside the scene.",
+  "total": 10,
+  "max": 10,
+  "pass": true,
+  "attempt": 1
+ },
+ {
+  "id": "voice-miss-follow-up",
+  "inferred_relationship": "Try, adjust, try again, with each attempt a bit better. When it reaches a good-enough mark you stop, call it done and go share it.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "voice: the opening 'Fold a paper airplane, throw it, fix the wing that dipped, throw it again' repeats the imperative iterate-list shape of the rejected sauce line ('Taste the sauce, adjust it, taste again'), and the turn uses a quoted line ('\"it made it all the way across the living room\"'), which the case invariant rules out as quoted dialogue. Either one caps voice at 1."
+  ],
+  "notes": "Same loop and stop condition: a quality bar or finish line ('all the way across the living room'). The scene is kinder and the turn lighter, ending on 'go find somebody to show', a warm, kid-like surprise rather than a penalty. It doesn't defend the sauce line, and there is no catchphrase, accent or unrelated relationship. It reads warm and Ted-like in spirit, and the stop condition is clearly recoverable. Inside the scene, 'every flight goes a little farther' is idealized, but it matches the input's 'each round has to make progress'.",
+  "total": 9,
+  "max": 10,
+  "pass": true,
+  "attempt": 1
+ },
+ {
+  "id": "pricing",
+  "inferred_relationship": "Read alone, the paint line says the headline price of the main item is a tidy partial figure, and the supporting costs (tape, brushes) plus a volume surprise (an extra coat) arrive on top of it later. Inside its own scene nothing is untrue: pricing paint does give a clean number, and tape, brushes and a second coat are real add-ons.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Voice -1: on a low-stakes budgeting input, the observation's last beat ('that surprise second coat get to introduce themselves later') ends on an unplanned extra cost, which the rubric caps at 1 as a trouble/loss beat."
+  ],
+  "invariant_check": "All invariants survive: hypothetical/not a vendor quote; $2 and $8 per million; per month; $6 + $4 = $10 before tax; storage and tool fees extra; cached-input discounts excluded; usage may vary. No unprovided facts asserted ('could lower the input cost' follows from 'discount'; 'not a ceiling' follows from extras plus variable usage). The image only points upward while the excluded cache discount points down, but the literal paragraph states that correctly, so the mechanism is not reversed.",
+  "discovery_notes": "Specific everyday scene, no technical counterparts named, no prop-by-prop mapping. The pivot to 'what the text actually says' plus 'That $10 is not the whole bill' partly restates the image's point, but that sentence is about the input, not a decoding of the props. Plausible wrong inference: a reader might take it that costs only go up, which the cache-discount sentence corrects.",
+  "total": 9,
+  "max": 10,
+  "pass": true,
+  "attempt": 3
+ }
+]
