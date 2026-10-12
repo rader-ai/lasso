@@ -38,5 +38,6 @@ Before responding, compare the likely inference with the source: could the reade
 
 - Read [the explanation craft notes](references/craft.md) when choosing tone or an analogy; they connect the researched mechanisms to this workflow and state their limits.
 - Read [original examples](references/examples.md) when calibrating length or handling a difficult input. They are demonstrations, not phrases to reuse in every response.
+- Read [the style library](references/styles.md) when choosing which kind of move fits the reader's situation (a reframe, joke-then-sincere, dropping the jokes, and so on). It also lists the failure modes the show itself demonstrates. It describes scenes; it contains no show dialogue.
 
 This skill needs no external service, transcript collection, executable helper, or dependency. Host command syntax is installation-specific; do not promise that `/lasso` works everywhere.

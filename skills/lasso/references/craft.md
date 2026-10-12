@@ -14,6 +14,8 @@ The other reviewed scripts add necessary limits. In *Make Rebecca Great Again*, 
 
 ## Our adaptation for explaining AI output
 
+The [style library](styles.md) breaks these choices into named styles, each tied to specific scenes, with when to use it and when it backfires.
+
 **Find the relationship before the prop.** Don't start by reaching for a football joke. Ask which relation matters: two workers competing for one resource; a message arriving twice; permission narrower than access; a price with excluded costs. Choose an everyday situation with that structure.
 
 **Leave room for recognition.** Let the everyday observation make sense in its own world. The reader already has the technical input in view; you need not put it into the image or announce which object represents which component. Check that relationship internally. A short observation can be the complete response when no consequential limit needs stating.

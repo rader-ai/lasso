@@ -1,4 +1,4 @@
-# Validation report: 0.1.3
+# Validation report: 0.1.3 and 0.1.4
 
 Date: 2026-10-12. This revision keeps the 0.1.2 response design (a freestanding everyday observation, with fuller explanation and consequential caveats available) and adds a voice rule: make the final turn a smile, not a sermon. It also tells the skill how to handle a voice miss (“doesn't sound like Ted”) separately from a comprehension miss.
 
@@ -18,10 +18,16 @@ Changes:
 
 **These 26 cases have not been run against 0.1.3.** No fresh model or live-host generation was performed, and no paid API call was made.
 
+## 0.1.4: style library
+
+`references/styles.md` adds eleven named styles and three failure modes, each tied to scenes. Script entries come from a re-read of the three shooting-script copies already in the research ledger; other entries were located through press recaps and are marked PRESS. Three press citations (S1E2, S1E8, S3E6) were spot-checked against their pages on 2026-10-12. Rights-holder clip pages were rate limited, so no new timestamps were added. No show dialogue is reproduced. Style 1 ("accidentally doing something else") is marked as the project's own pattern because no show scene was found for it.
+
+This is reference material. It has not been tested for whether it changes the skill's outputs.
+
 ## Structural checks
 
 - Skill frontmatter (name, description) present; no unfinished-scaffold markers: passed with a local standard-library check.
-- All package JSON parsed. Both manifests agree on name, description, and version `0.1.3`.
+- All package JSON parsed. Both manifests agree on name, description, and version `0.1.4`.
 - 26 unique fixture ids; the original 24 fixture records are unchanged (parsed and compared to the previous commit).
 - Local Markdown link targets resolve.
 - No license, runtime dependency, hook, MCP server, or executable helper added.
