@@ -8,7 +8,7 @@ Warmth, a little wit, and the important details still attached.
 
 Created by Chris (rader-ai).
 
-> **Review draft · 0.1.5.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
+> **0.1.6 · MIT licensed.** Free to use, copy and adapt. Directory listings are not submitted yet.
 
 ## Start with the confusing part
 
@@ -107,13 +107,13 @@ You can name the audience or length: “for a new developer,” “for our produ
 
 ## Evidence and readiness
 
-The [validation report](evals/results.md) separates structural checks and author-reviewed examples from actual model evaluation. 0.1.3 adds a voice rule (make the final turn a smile, not a sermon) and two regression fixtures for it. A model-graded run of the 26-case suite against 0.1.4 passed 22 of 26 with no hard failures ([run report](evals/run-0.1.4/README.md)); after the 0.1.5 fixes, all five failed or voice-capped cases pass on re-run ([re-run report](evals/run-0.1.5/README.md)). Graders and runners are the same model family; no human comprehension test has been run. The [0.1.2 report](evals/results-0.1.2.md) is archived.
+The [validation report](evals/results.md) separates structural checks and author-reviewed examples from actual model evaluation. 0.1.3 adds a voice rule (make the final turn a smile, not a sermon) and two regression fixtures for it. A model-graded run of the 26-case suite against 0.1.4 passed 22 of 26 with no hard failures ([run report](evals/run-0.1.4/README.md)); after the 0.1.5 fixes, all five failed or voice-capped cases pass on re-run ([re-run report](evals/run-0.1.5/README.md)). The full suite on 0.1.5 passed 24 of 26 ([full run](evals/run-0.1.5-full/README.md)). A [human reader test](evals/reader-test/README.md) is ready but has no responses yet. Graders and runners are the same model family; no human comprehension test has been run. The [0.1.2 report](evals/results-0.1.2.md) is archived.
 
 The [18-case Astra run](evals/results-0.1.1.md), [eight-case desk review](evals/independent-review-0.1.1/README.md), and [follow-up comparison](evals/follow-up-comparison-0.1.1/README.md) apply to 0.1.1. Their outputs remain preserved; they do not validate this changed response style. Human comprehension and conversational host invocation remain unverified.
 
 ## Free distribution, with clear limits
 
-The intended home is [rader-ai/lasso](https://github.com/rader-ai/lasso). The goal is a free, reusable package. This draft has no license yet; MIT is proposed for Chris's review. No free-reuse terms have been applied on his behalf. Host subscriptions and model usage may still cost money.
+The intended home is [rader-ai/lasso](https://github.com/rader-ai/lasso). The goal is a free, reusable package. It is released under the [MIT License](LICENSE). Host subscriptions and model usage may still cost money.
 
 The [publication checklist](docs/distribution.md) covers GitHub, skills.sh, and the OpenAI and Anthropic directories. No submission or listing is implied. Lasso adds no telemetry; the AI host still processes the text you give it under that host's own settings and terms.
 

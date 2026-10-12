@@ -1,0 +1,4 @@
+7cd563898ac589c127524104efd68b919357ec6ff6ab83d749391201c066fcf2  skills/lasso/SKILL.md
+72ad7dc10b6d636d38f3cbbae16a727bac600780a3b773bb065537fc4fa24b16  skills/lasso/references/craft.md
+a6969c96d5bd12a4f1a719ea39b42b728fdf12eb77cf52112a46a9e942ac4fd3  skills/lasso/references/examples.md
+f68cd8d894b749305aa3bef0244d8c3cd2b3bc0781330148b366d116435dbd8c  skills/lasso/references/styles.md

@@ -1,4 +1,4 @@
-# Validation report: 0.1.3 to 0.1.5
+# Validation report: 0.1.3 to 0.1.6
 
 Date: 2026-10-12. This revision keeps the 0.1.2 response design (a freestanding everyday observation, with fuller explanation and consequential caveats available) and adds a voice rule: make the final turn a smile, not a sermon. It also tells the skill how to handle a voice miss (“doesn't sound like Ted”) separately from a comprehension miss.
 
@@ -30,10 +30,14 @@ The 26-case suite was run against 0.1.4 with fresh runner agents and graded by s
 
 The voice rule now allows silly, harmless "or you're just..." endings and rules out endings implying waste, trouble, loss, or blame, and warns against reusing an example's sentence shape. Observations must be literally true of the input and of their own scene, and time periods join the preserve list. All five cases that failed or were voice-capped in 0.1.4 pass on re-run (pricing on its third attempt). See the [0.1.5 re-run report](run-0.1.5/README.md). The other 21 cases were not re-run.
 
+## 0.1.6: full run, reader test, license
+
+Rubric decisions approved: no voice cap when the warning is the input's own main caveat, and the no-quotes rule covers show dialogue only. The full 26-case suite then passed **24 of 26 with no hard failures** ([full run report](run-0.1.5-full/README.md)); the top remaining weakness is copying the shape of the authored examples. A [reader test](reader-test/README.md) for human comprehension is published as a private artifact and waiting for readers. The package is now MIT licensed.
+
 ## Structural checks
 
 - Skill frontmatter (name, description) present; no unfinished-scaffold markers: passed with a local standard-library check.
-- All package JSON parsed. Both manifests agree on name, description, and version `0.1.5`.
+- All package JSON parsed. Both manifests agree on name, description, and version `0.1.6`.
 - 26 unique fixture ids; the original 24 fixture records are unchanged (parsed and compared to the previous commit).
 - Local Markdown link targets resolve.
 - No license, runtime dependency, hook, MCP server, or executable helper added.

@@ -1,4 +1,4 @@
-# Distribution plan — local review draft
+# Distribution plan
 
 Checked against first-party documentation on 2026-10-11. Chris authorized publishing the reviewed source to the existing GitHub repository after local validation. No marketplace registration, submission, global install, or directory publication has occurred. The goal remains a free reusable skill; licensing and marketplace release are separate decisions.
 
@@ -21,17 +21,26 @@ Other Agent Skills hosts may load the canonical folder, but commands and support
 | GitHub `rader-ai/lasso` | Push reviewed original source to the exact existing remote, preserving author identity and remote changes. A license is still needed for explicit free-reuse terms. | Source push authorized; the delivery receipt records the verified remote commit. |
 | skills.sh | Once the repo is public, users can install through the skills CLI. Its FAQ says leaderboard discovery follows installations reported through aggregate telemetry. This is not a curated listing submission or guaranteed prominence. | No CLI run, install, telemetry choice, or listing claim. |
 | OpenAI plugin directory | Upload a ZIP under a verified developer identity, address validation/review requirements, complete attestations, then publish an approved version. Skills-only packages do not need MCP review cases or an MCP demo recording. | Portable manifest prepared; account, listing and review actions pending. |
-| Anthropic plugin directory | Validate the selected plugin folder; connect an authorized GitHub account for submission; complete review. Public release requires a public repository. README and license are required by its checklist. | Claude wrapper prepared; license and submission decisions pending. |
+| Anthropic plugin directory | Validate the selected plugin folder; connect an authorized GitHub account for submission; complete review. Public release requires a public repository. README and license are required by its checklist. | Repo is public and MIT licensed. Submission needs Chris's GitHub authorization and review steps. |
 
 Sources: [skills.sh FAQ](https://www.skills.sh/docs/faq), [OpenAI submission](https://developers.openai.com/plugins/deploy/submission), [Anthropic submission](https://claude.com/docs/plugins/submit), [Anthropic checklist](https://claude.com/docs/plugins/pre-submission-checklist). Recheck these immediately before release; schemas and submission workflows change.
 
 ## Decisions before release
 
-- **License:** The starting repo has none. Recommend MIT as a simple permissive option for Chris to review, rather than silently imposing it. Chris must choose the license and copyright notice; then add the actual `LICENSE` and matching manifest metadata. No free-reuse rights are being asserted by this draft. [MIT license text](https://opensource.org/license/mit).
+- **License:** Decided 2026-10-12: Chris approved MIT. `LICENSE` (copyright Chris Rader, rader-ai) and `"license": "MIT"` in both manifests were added in 0.1.6. [MIT license text](https://opensource.org/license/mit).
 - **Destination:** Choose which directory, if any, in addition to the public GitHub repository. A repo catalog alone does not create an official directory listing.
 - **Public identity and data:** Confirm publisher display name/contact, listing copy, and any support/privacy/terms URLs the chosen destination requires. The package has no telemetry or service, but host providers process supplied prompts under their own settings. Do not invent a privacy policy or claim local-only processing.
 - **Branding and evidence:** Approve the project name and independent, unaffiliated positioning. Confirm the research coverage statement and all original examples. Include no scripts, transcripts, stills, logos, likenesses, or supposed quotations from the show.
-- **Release quality:** Complete per-host conversational smoke tests; record versions, outputs and any failures. Resolve the missing license before calling this ready for marketplace submission.
+- **Release quality:** Complete per-host conversational smoke tests; record versions, outputs and any failures. The license is resolved; per-host smoke tests remain.
 - **Remaining authorization:** Local commits and the reviewed GitHub source push are authorized. Marketplace upload/submission, directory publication and required terms still need separate approval. Do not create accounts, accept terms, enable webhooks, or spend money as a packaging step.
 
 “Free skill” means no separate fee planned for this package. Users may still need a paid host account or incur model usage charges. Nothing in this draft promises directory acceptance, endorsement, or comprehension for every reader.
+
+## Steps left for Chris (2026-10-12)
+
+These need your own accounts or acceptance of terms, so they were prepared but not done for you:
+
+1. **Anthropic plugin directory:** open the [submission page](https://claude.com/docs/plugins/submit), connect your GitHub account, point it at `rader-ai/lasso`, and complete review. The repo now meets the public-repo, README and license requirements in the [checklist](https://claude.com/docs/plugins/pre-submission-checklist); recheck it on the day.
+2. **OpenAI plugin directory:** zip the repo root, upload under a verified developer identity, complete the attestations ([submission guide](https://developers.openai.com/plugins/deploy/submission)).
+3. **skills.sh:** nothing to submit. Because the repo is public, people can install it with the skills CLI; listing follows installs.
+4. **Before any of these:** run one conversational smoke test in each host you advertise and record it in `evals/`.
