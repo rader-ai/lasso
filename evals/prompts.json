@@ -127,5 +127,17 @@
     "audience": "product teammate",
     "request": "Give me a short Lasso take.",
     "input": "In this hypothetical study of 40 teams, tool adoption was associated with a 10% lower median turnaround time. The teams chose whether to adopt it; treatment was not randomized. The 95% confidence interval ranged from -3% to 23% improvement. The study does not establish that the tool caused the difference."
+  },
+  {
+    "id": "warm-turn-observation",
+    "audience": "product teammate",
+    "request": "Just the short Lasso take.",
+    "input": "A recursive loop uses its own output as its next input. Each round has to make progress toward done, and the loop needs a clear stop condition (a finish line, a quality bar, or a maximum number of tries). Without one it runs forever and wastes compute."
+  },
+  {
+    "id": "voice-miss-follow-up",
+    "audience": "product teammate",
+    "request": "The previous take was \"Taste the sauce, adjust it, taste again. A cook who never decides it's ready never gets dinner on the table.\" It's accurate but it doesn't feel warm, and it doesn't sound like Ted. Try again, short.",
+    "input": "A recursive loop uses its own output as its next input. Each round has to make progress toward done, and the loop needs a clear stop condition (a finish line, a quality bar, or a maximum number of tries). Without one it runs forever and wastes compute."
   }
 ]

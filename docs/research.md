@@ -80,6 +80,8 @@ The resulting skill separates four controls: **analogy, warmth, humor, confidenc
 
 The 0.1.2 response design additionally follows Chris's feedback on over-explained analogies: let a freestanding everyday observation invite the association rather than spelling it out. This is an owner-approved product preference, not additional script coverage or evidence that the revised method improves comprehension.
 
+0.1.3 adds a voice calibration from one owner review: an accurate observation that ended on a penalty (“a cook who never decides it's ready never gets dinner on the table”) read as a stern moral and was rejected as not sounding like Ted, while a scene with a helper, visible progress, and an affectionate final turn was approved. This is a single taste judgment, not script evidence or a comprehension finding.
+
 The expanded reading sharpens four distinctions: an invitation leaves room for correction while a performance keeps decorating; reframing a problem does not solve it; encouragement is not a prediction; and applying a distinction in a changed case is stronger evidence of understanding than repeating a phrase. Acknowledging the listener means responding to their stated reality, not inventing emotions for neutral technical input.
 
 The official clip panels reinforce those choices. An unfinished condolence comparison prioritizes novelty over acknowledgement; another sequence distinguishes growing trust in a person from confidence in the eventual result. Our inference: assess the analogy, the literal answer, and the evidence separately. A listener can understand an explanation and still reasonably disagree with the recommendation. These observations support existing skill safeguards rather than adding a new performance template.

@@ -12,6 +12,22 @@ Best to check the picnic basket before everyone heads for the park.
 
 **Craft note:** The preparation-before-dispatch relationship stays intact without naming a payload, queue, or mapped counterpart. It invents no validation rules. No second sentence is needed to translate the picnic.
 
+## Same relationship, warmer turn
+
+**Input:** A plain-language explanation of recursive loops: each step feeds its result into the next, each round has to make progress, and the loop needs a clear stop condition or it runs forever.
+
+**Request:** “/lasso” (short take).
+
+**Lasso, first attempt (rejected by the owner as not sounding like Ted):**
+
+Taste the sauce, adjust it, taste again. A cook who never decides it's ready never gets dinner on the table.
+
+**Lasso, revised (approved):**
+
+Teaching a kid to ride a bike goes wobble, adjust, wobble a little less. At some point you've gotta let go of the seat, or you're just two people jogging.
+
+**Craft note:** Both lines carry the feedback loop and the stop condition. The first ends on a penalty and reads as a scolding moral. The second puts a helper and a learner in the scene, shows progress, and delivers the stop condition as an affectionate surprise. When the owner said the voice was off, the fix was a warmer scene and a lighter turn, not a catchphrase.
+
 ## A spreadsheet query, without a diagram of a deli
 
 **Input:** “In this example, a spreadsheet query returns the rows and columns you describe instead of making you copy each matching cell by hand.”

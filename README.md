@@ -8,7 +8,7 @@ Warmth, a little wit, and the important details still attached.
 
 Created by Chris (rader-ai).
 
-> **Review draft · 0.1.2.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
+> **Review draft · 0.1.3.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
 
 ## Start with the confusing part
 
@@ -82,7 +82,7 @@ The research starts with context: who needs help, what is unfamiliar, and what t
 
 Our adaptation is to understand the relationship, check it internally, and leave room for recognition. A short everyday observation can stand on its own. When the user wants more depth, the separate explanation gives the actual terms and limits without turning the observation into a labeled diagram. Critical caveats remain explicit; neither a decoding paragraph nor a takeaway is compulsory.
 
-This revision follows Chris's feedback that the reader should make the association. It is a product choice, not a new finding attributed to the show's writers or evidence of improved learning. Warmth, humor, analogy, and confidence are separate choices; the skill can turn one down without losing the others. Understanding an explanation doesn't require agreeing with its recommendation. See the [craft notes](skills/lasso/references/craft.md) and [research ledger](docs/research.md) for inspected scenes, creator commentary, provenance and gaps. Full-script coverage is 3 of 44 catalogued episodes. Clip captions add partial evidence, not full episodes or verified visual performances. Full broadcast cuts were not reviewed or compared with the drafts.
+This design follows Chris's feedback that the reader should make the association, and (0.1.3) that the final turn should land as warmth rather than a warning. It is a product choice, not a new finding attributed to the show's writers or evidence of improved learning. Warmth, humor, analogy, and confidence are separate choices; the skill can turn one down without losing the others. Understanding an explanation doesn't require agreeing with its recommendation. See the [craft notes](skills/lasso/references/craft.md) and [research ledger](docs/research.md) for inspected scenes, creator commentary, provenance and gaps. Full-script coverage is 3 of 44 catalogued episodes. Clip captions add partial evidence, not full episodes or verified visual performances. Full broadcast cuts were not reviewed or compared with the drafts.
 
 ## What stays intact
 
@@ -107,7 +107,7 @@ You can name the audience or length: “for a new developer,” “for our produ
 
 ## Evidence and readiness
 
-The [0.1.2 validation report](evals/results.md) separates structural checks and author-reviewed examples from actual model evaluation. Six new regression fixtures cover freestanding observations, requested depth, permissions, follow-ups, and consequential caveats. No fresh model or live-host generation has been run for this revision; the 24-case suite is prepared, not reported as passed.
+The [0.1.3 validation report](evals/results.md) separates structural checks and author-reviewed examples from actual model evaluation. 0.1.3 adds a voice rule (make the final turn a smile, not a sermon) and two regression fixtures for it. No fresh model or live-host generation has been run for 0.1.2 or 0.1.3; the 26-case suite is prepared, not reported as passed. The [0.1.2 report](evals/results-0.1.2.md) is archived.
 
 The [18-case Astra run](evals/results-0.1.1.md), [eight-case desk review](evals/independent-review-0.1.1/README.md), and [follow-up comparison](evals/follow-up-comparison-0.1.1/README.md) apply to 0.1.1. Their outputs remain preserved; they do not validate this changed response style. Human comprehension and conversational host invocation remain unverified.
 
