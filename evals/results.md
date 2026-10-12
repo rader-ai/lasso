@@ -16,13 +16,15 @@ Changes:
 - `evals/prompts.json`: two new fixtures, `warm-turn-observation` and `voice-miss-follow-up` (26 total). The first 24 records are unchanged.
 - `evals/README.md`: rubric rows for the new fixtures, and a voice cap: for low-stakes inputs, an observation whose last beat scolds, warns, or names a loss scores at most 1 on voice. Direct risk statements in serious cases are exempt.
 
-**These 26 cases have not been run against 0.1.3.** No fresh model or live-host generation was performed, and no paid API call was made.
+These 26 cases were not run against 0.1.3 itself; see the 0.1.4 run below.
 
 ## 0.1.4: style library
 
 `references/styles.md` adds eleven named styles and three failure modes, each tied to scenes. Script entries come from a re-read of the three shooting-script copies already in the research ledger; other entries were located through press recaps and are marked PRESS. Three press citations (S1E2, S1E8, S3E6) were spot-checked against their pages on 2026-10-12. Rights-holder clip pages were rate limited, so no new timestamps were added. No show dialogue is reproduced. Style 1 ("accidentally doing something else") is marked as the project's own pattern because no show scene was found for it.
 
-This is reference material. It has not been tested for whether it changes the skill's outputs.
+## 0.1.4 behavioral run
+
+The 26-case suite was run against 0.1.4 with fresh runner agents and graded by separate agents (same model family). **22 of 26 passed, with no hard failures.** Failures: pricing, terse-prompt, spreadsheet-query-depth, voice-miss-follow-up. See the [run report](run-0.1.4/README.md) for method, limits, raw outputs and grades. These are model grades, not human judgment.
 
 ## Structural checks
 
@@ -40,4 +42,4 @@ The [0.1.2 report](results-0.1.2.md), [0.1.1 report](results-0.1.1.md), and [0.1
 
 ## Remaining checks
 
-Run the 26-case suite, with special attention to whether the new voice rule makes lines warmer without drifting into folksiness, catchphrases, or forced jokes, and whether serious cases still get plain, direct risk statements. Human review of whether associations land, and conversational invocation in each advertised host, remain unverified.
+Settle the voice-rule ambiguity raised by the run (whether the approved bike ending counts as an "or else" beat), then re-run the failed cases. Watch whether the new voice rule makes lines warmer without drifting into folksiness, catchphrases, or forced jokes, and whether serious cases still get plain, direct risk statements. Human review of whether associations land, and conversational invocation in each advertised host, remain unverified.

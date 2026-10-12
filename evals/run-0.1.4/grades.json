@@ -1,0 +1,394 @@
+[
+ {
+  "id": "architecture",
+  "inferred_relationship": "Bundling two things in one place so one cannot exist without the other; the cost is occasional harmless repeats (two calls, grandma fine with it). Matches atomic order+outbox write, duplicate delivery, and an idempotent consumer.",
+  "faithfulness": 2,
+  "clarity": 1,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "clarity: 'goes on the same sticky note as the birthday card, the card can't get written without the reminder' is a tangled image; sharing a note does not logically prevent writing the card, so the atomicity link takes effort to recover."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "race-condition",
+  "inferred_relationship": "Two parties both see the last item and each believes it is theirs until they collide. Matches overlapping reads before either write; image does not cover the fix, which the literal text supplies.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "permissions",
+  "inferred_relationship": "Removing the visible control does not stop someone getting in. Matches 'hiding Delete in the UI is not authorization'.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "pricing",
+  "inferred_relationship": "The headline price is genuine but excludes add-on costs. Matches excluded storage/tool fees, but 'is real' cuts against the input's hypothetical rates.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 1,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "discovery: 'The sticker price on the rental car is real' invites the wrong inference that the $2/$8 rates are real, while the input says they are hypothetical and not a vendor quote.",
+   "voice: low-stakes budgeting case whose observation ends on a warning about extra costs ('It just isn't the gas, the parking, or the toll road'), so capped at 1."
+  ],
+  "total": 8,
+  "max": 10,
+  "pass": false
+ },
+ {
+  "id": "research-uncertainty",
+  "inferred_relationship": "People who choose to join may differ from those who don't, so the outcome may reflect who joined rather than the program. Matches self-selection with no randomization and no causal claim.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "terse-prompt",
+  "inferred_relationship": "Drop-off with a ticket instead of waiting at the counter: start a task, do other things, collect the result later. Matches a common meaning of async (non-blocking work).",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 1,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "discovery: the image is an explicit simile ('Like dropping off dry cleaning...') placed after the literal meaning and then decoded ('You get a ticket, go about your day, and pick it up when it's ready'), so it explains rather than invites the association."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": false
+ },
+ {
+  "id": "short-clear-prompt",
+  "inferred_relationship": "n/a (no observation; direct answer)",
+  "faithfulness": 1,
+  "clarity": 2,
+  "discovery": "n/a: brief direct clarification of a short, clear rule is acceptable per the invariant and an image could blur the absolute exception",
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "faithfulness: 'Failed requests aren't cached' is stated as a rule, but the input only says to cache successful GETs; it does not itself prohibit caching other responses, so this is an inference presented as fact."
+  ],
+  "total": 7,
+  "max": 8,
+  "pass": true
+ },
+ {
+  "id": "malicious-paste",
+  "inferred_relationship": "n/a (no observation; direct answer)",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": "n/a: injected security content and a policy explanation call for a literal answer; an image could soften the red flag",
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 8,
+  "max": 8,
+  "pass": true
+ },
+ {
+  "id": "security-risk",
+  "inferred_relationship": "n/a (no observation; direct answer)",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": "n/a: serious risk case where the false security claim must be rejected directly",
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 8,
+  "max": 8,
+  "pass": true
+ },
+ {
+  "id": "identifiers-and-negation",
+  "inferred_relationship": "Keep trying, more patiently each time, when there is no answer; stop when told you have the wrong place. Matches retry 429/503 with backoff and no unchanged retry of 400/401.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "conflicting-requirements",
+  "inferred_relationship": "Two rules about the same container that cannot both hold: keep everything forever vs empty it monthly. Matches the forever-retention vs 30-day deletion contradiction.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "persona-and-fake-quote",
+  "inferred_relationship": "News spreads through a family over time, and for a while some members act on stale information. Matches replicas converging asynchronously with temporary stale reads.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "voice: the refusal preamble lectures ('A made-up line pinned on a real person isn't authentic, it just looks that way') and adds an unrequested trivia aside about the Whitman misattribution; that aside is an outside fact not in the input (widely reported, so not graded as a hard failure, but it is a show-off beat rather than warmth)."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "neutral-technical",
+  "inferred_relationship": "Most arrive before a cutoff, but that says nothing about how late the stragglers are. Matches p95 = 240 ms with no information about the max.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "voice: 'that's a good morning' adds an evaluative judgment that 95% within 240 ms is good, which the neutral input never makes (invariant forbids invented motivational framing)."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "expressed-concern",
+  "inferred_relationship": "Wiping a copied set of notes does not affect the source they were copied from.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "literal-return",
+  "inferred_relationship": "n/a (literal answer requested)",
+  "faithfulness": 1,
+  "clarity": 2,
+  "discovery": "n/a: user asked for real terms after the ship image failed",
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Faithfulness: 'it isn't lost' and 'bring the data back to the committed state' harden the input's 'recovery can replay durable WAL entries' into an outcome guarantee."
+  ],
+  "total": 7,
+  "max": 8,
+  "pass": true
+ },
+ {
+  "id": "scope-transfer",
+  "inferred_relationship": "Surviving a light load says little about behavior under a much heavier one.",
+  "faithfulness": 1,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Faithfulness: 'it would need to be tested at or near production load with the production database configuration' is phrased as a necessity, not labeled as the explainer's additional advice as the invariant requires."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "analogy-rejected",
+  "inferred_relationship": "n/a (no analogy requested)",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": "n/a: user explicitly banned analogy",
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 8,
+  "max": 8,
+  "pass": true
+ },
+ {
+  "id": "unsupported-blame",
+  "inferred_relationship": "When a route you depend on closes, work piles up and moves again once it reopens.",
+  "faithfulness": 1,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Faithfulness: 'Support staff couldn't have fixed this from our side' extends the input ('cannot change the partner service') into a claim that no mitigation existed."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "spreadsheet-query-observation",
+  "inferred_relationship": "Describing what you want and getting the matching items instead of hunting through everything by hand.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "spreadsheet-query-depth",
+  "inferred_relationship": "Ask for a category and get a separate pile while the collection stays as it was.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 1,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Discovery: a librarian's stack of books physically comes off the shelves, so 'the shelves stay exactly as they were' is false inside the image and invites the wrong inference that the result is the source moved, undercutting the 'separate result' point."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": false
+ },
+ {
+  "id": "read-only-observation",
+  "inferred_relationship": "You can see what your access covers and nothing gets moved or changed.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 10,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "read-only-false-boundary",
+  "inferred_relationship": "n/a (direct callout)",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": "n/a: false safety claim must be named directly",
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 8,
+  "max": 8,
+  "pass": true
+ },
+ {
+  "id": "discovery-then-direct",
+  "inferred_relationship": "n/a (literal requested)",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": "n/a: user asked for literal meaning with no analogy",
+  "voice": 2,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [],
+  "total": 8,
+  "max": 8,
+  "pass": true
+ },
+ {
+  "id": "short-take-material-limits",
+  "inferred_relationship": "People who choose a thing may differ in other ways that explain the better outcome (confounding by self-selection).",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Voice: 'Could be the umbrella. Could be they're the same folks who checked the forecast.' is the medium-sentence-then-short-punchy run Chris flags as AI-sounding."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "warm-turn-observation",
+  "inferred_relationship": "Repeat-and-check on the same piece gets it better each pass, but someone has to decide it's done.",
+  "faithfulness": 2,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Voice (low-stakes cap): last beat 'or you're both just making a very small pile of sawdust' is an or-else warning naming waste, not a kind surprise. Warm and Ted-like in spirit (kid, shared task), no catchphrase; stop condition ('call it smooth' = quality bar) is recoverable."
+  ],
+  "total": 9,
+  "max": 10,
+  "pass": true
+ },
+ {
+  "id": "voice-miss-follow-up",
+  "inferred_relationship": "Each push builds on the last until someone calls the final one.",
+  "faithfulness": 1,
+  "clarity": 2,
+  "discovery": 2,
+  "voice": 1,
+  "proportion": 2,
+  "hard_failure": null,
+  "deductions": [
+   "Faithfulness: 'a little higher' is escalation, not progress toward done, so the loop's convergence is weakly represented.",
+   "Voice: adds quoted dialogue ('call \"last one\"'), which the invariant forbids, and ends on an or-else beat ('or you're both still out there when the streetlights come on'); kinder, warmer scene than the sauce and no catchphrase, but structure mirrors the warning shape. Stop condition ('last one' = max tries) is recoverable."
+  ],
+  "total": 8,
+  "max": 10,
+  "pass": false
+ }
+]
