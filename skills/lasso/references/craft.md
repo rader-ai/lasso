@@ -16,15 +16,17 @@ The other reviewed scripts add necessary limits. In *Make Rebecca Great Again*, 
 
 **Find the relationship before the prop.** Don't start by reaching for a football joke. Ask which relation matters: two workers competing for one resource; a message arriving twice; permission narrower than access; a price with excluded costs. Choose an everyday situation with that structure.
 
-**Let the reader keep their dignity.** The tone should suggest that the explanation is worth clearing up, not that the reader needs remedial help. Avoid “obviously,” “it's simple,” and automatic reassurance. A warm sentence can just be specific and useful.
+**Leave room for recognition.** Let the everyday observation make sense in its own world. The reader already has the technical input in view; you need not put it into the image or announce which object represents which component. Check that relationship internally. A short observation can be the complete response when no consequential limit needs stating.
 
-**Make the surprising detail do work.** A coat-check ticket that cannot authorize a second pickup teaches deduplication. A whimsical adjective attached to “database” does not. Delete the joke if it adds a new object the reader now has to decode.
+**Let the reader keep their dignity.** Trust them to make the connection. Warmth can live in a generous everyday observation, even for a neutral technical request. Avoid “obviously,” “it's simple,” invented distress, and automatic reassurance. Do not confuse emotional restraint with a flat voice.
 
-**Name the seam.** A comparison may explain duplicate delivery without explaining database transactions. State the technical condition that the analogy leaves out. Not every response needs the phrase “the analogy breaks down”; one clear literal sentence usually suffices.
+**Let the small turn land.** One recognizable scene and an unexpected but fitting observation can carry the point. A whimsical adjective attached to “database” cannot. Keep a detail that invites recognition or adds warmth; lose the extra characters and the explanation of why the line is clever. Humor is welcome, not required.
+
+**Notice the seam internally; state it when it matters.** An observation may illuminate duplicate delivery without explaining database transactions. Do not append a ritual list of analogy limits. Add a direct factual clarification when silence would mislead about a condition, risk, number, or permission; otherwise let the observation stand.
 
 **Keep the literal model underneath.** Map two or three useful roles and one relationship. Check the mapping in both directions: does it predict the right technical consequence, and which familiar properties must not transfer? A helpful library analogy must not imply perfect retrieval; a queue analogy must not imply exactly-once processing. If six imaginary characters are needed, try a direct example.
 
-**Give the reader the real terms back.** A memory hook can crowd out its target. After comparing a queue to a waiting line, say which component actually stores messages and what delivery behavior is specified. If transfer matters, show one small boundary case: success for one tenant does not establish permission for another. Don't mistake remembering the image for knowing how to apply the distinction.
+**Keep depth available without decoding the image.** If the user asks for a fuller explanation, explain the actual system with its useful terms and limits in separate prose. If they need the real vocabulary, give it directly. There is no need to equate the books with records or the cook with a component. A boundary case can help when applying a distinction matters. Remembering an observation is not evidence that someone can use the idea correctly.
 
 **Watch what the image assigns.** A story about a negligent caretaker can introduce blame into an explanation that only establishes a system failure. Images of deliberate choice can invent intent or control. Keep any attribution anchored to the input, especially when discussing another person's responsibility.
 
@@ -34,4 +36,4 @@ The other reviewed scripts add necessary limits. In *Make Rebecca Great Again*, 
 
 **Separate perspective from evidence.** A clearer way to see a problem does not solve it. A successful test proves only what its conditions support. Attach confidence to the checkable distinction, then state the unresolved result or next useful check. Do not promise a happy ending to make the explanation feel complete.
 
-The default movement is a concrete comparison, a literal explanation, and a grounded takeaway. That sequence is our design choice for this skill, not a formula attributed to the show's writers. It is a useful default, not a mandatory three-heading template.
+The freestanding short observation is our design choice, sharpened by Chris's feedback on explanations that over-mapped their images. It is not a formula attributed to the show's writers or a newly verified finding about learning. Fuller explanation remains available; neither visible mapping nor a takeaway is compulsory.

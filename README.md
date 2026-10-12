@@ -2,17 +2,19 @@
 
 **Make sense of the AI answer in front of you.**
 
-Lasso is a small Agent Skill for product people, developers, and anyone staring at an answer that is technically detailed but hard to grasp. Give it an architecture explanation, an AI-generated recommendation, or a two-line prompt. It uses one useful everyday comparison when that helps, returns to the literal meaning, and leaves you with a practical takeaway. A tiny question can get a direct answer.
+Lasso is a small Agent Skill for product people, developers, and anyone staring at an answer that is technically detailed but hard to grasp. Give it an architecture explanation, an AI-generated recommendation, or a two-line prompt. A short take can be one everyday observation that lets you make the connection yourself. Fuller explanations keep useful mechanics and caveats in separate prose, without translating every part of the image. A tiny question can get a direct answer.
 
 Warmth, a little wit, and the important details still attached.
 
 Created by Chris (rader-ai).
 
-> **Local review draft · 0.1.1.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
+> **Review draft · 0.1.2.** Built for free public distribution. License selection and publication are pending; this is not a marketplace listing yet.
 
 ## Start with the confusing part
 
 After [loading Lasso in your host](#try-it-locally), paste the text or point to an answer: “Lasso the answer above for a product teammate.” You can also select just the sentence you want explained. No special brief is required; the commands below depend on your host.
+
+For a compact observation, ask “Just the short Lasso take.” For depth, ask “Explain the mechanics too.” These are ordinary requests, not extra commands. A short observation does not automatically come with a translation or takeaway; a consequential caveat still gets stated directly.
 
 If you are still stuck, say which part: “What happens first?”, “Shorter—is that a guarantee?”, or “Drop the analogy.” You can clarify the audience or change the target. A follow-up should resolve that question without restarting the whole explanation or dropping the source's limits.
 
@@ -20,7 +22,7 @@ If you are still stuck, say which part: “What happens first?”, “Shorter—
 
 These are original examples written for this project, not dialogue from the show.
 
-### When the AI gives you a technical wall
+### When you want the technical explanation too
 
 **Before**
 
@@ -28,11 +30,11 @@ These are original examples written for this project, not dialogue from the show
 
 **With Lasso**
 
-Think of a library that has put a new book on the shelf while its catalog is still catching up. The book can be there even when the search says it isn't.
+A book can be back on the shelf while the catalog is still telling yesterday's story.
 
-Here, the database is the record of the write; the search index is a separate copy used for finding things. Saving to the database can succeed before indexing finishes. Someone searching immediately after a save may not see their own change, and heavier load can change how long that gap lasts.
+The database is the record of the write; the search index is a separate copy used for finding things. Saving to the database can succeed before indexing finishes. Someone searching immediately after a save may not see their own change, and heavier load can change how long that gap lasts.
 
-The practical takeaway: a successful save and a visible search result are two different moments. This description doesn't promise how far apart they'll be.
+A successful save and a visible search result are two different moments. This description doesn't promise how far apart they'll be.
 
 ### When the prompt is already short
 
@@ -42,9 +44,23 @@ The practical takeaway: a successful save and a visible search result are two di
 
 **With Lasso**
 
-Check the parcel before it gets on the delivery truck. Here, that means checking the request's data against the required rules before adding the job to the queue. The takeaway: queue placement comes after validation; the prompt doesn't yet say which rules to check.
+Best to check the picnic basket before everyone heads for the park.
 
 A short prompt shouldn't come back wearing a graduation gown. If the meaning is ambiguous, Lasso asks a focused question instead of inventing the missing requirements.
+
+### When a spreadsheet query feels unfamiliar
+
+**Source, hypothetical:** “A spreadsheet query returns the rows and columns you describe instead of making you copy each matching cell by hand.”
+
+**Short Lasso take:** You can order lunch without climbing over the counter to make it.
+
+### When a data tool can read but cannot change records
+
+**Source, hypothetical:** “This tool can retrieve permitted records but has no capability to create, change, or delete records.”
+
+**Short Lasso take:** A window gives you a good look at the room. It doesn't let you rearrange the furniture.
+
+These examples do not establish the behavior or permissions of any particular spreadsheet product, API, or server. See the [examples](skills/lasso/references/examples.md) for cases that need direct caveats instead.
 
 ### When the first explanation needs a follow-up
 
@@ -52,9 +68,11 @@ This is an authored example, not a recorded user session.
 
 **Source:** “Uploads are scanned asynchronously. `201 Created` confirms storage, not scan approval. Downloads remain blocked until the scan passes.”
 
-**Lasso:** A parcel can arrive at a depot before an inspector clears it. Here, `201 Created` says the upload is stored; downloads stay blocked until the scan passes.
+**Lasso:** A parcel can reach the depot before it is cleared to leave.
 
-**You:** “Drop the parcel. Can I download it now?”
+`201 Created` confirms storage, not scan approval. Downloads remain blocked until the scan passes.
+
+**You:** “Can I download it now?”
 
 **Lasso:** Not from `201 Created` alone. You can download it only after the scan passes.
 
@@ -62,9 +80,9 @@ This is an authored example, not a recorded user session.
 
 The research starts with context: who needs help, what is unfamiliar, and what the comparison changes for the listener. It includes the complete extracted text of three dated shooting drafts—*Pilot*, *Make Rebecca Great Again*, and *Rainbow*—plus nine substantive official clip transcript-panel readings and seven firsthand craft interview sources. They show both useful connections and failure modes. A laugh can happen without comprehension. Reassurance can reopen uncertainty without proving a happy outcome. A clever line can create more decoding work—or miss that someone needs a direct response.
 
-Our adaptation is **understand the need → one useful comparison → literal meaning → grounded takeaway**. The comparison has to match the mechanism. The literal explanation gives you the actual terms and limits, so you can use the idea without retelling the story. The takeaway stays inside what the input supports. A stated worry can deserve acknowledgement; an ordinary technical question doesn't need invented emotions.
+Our adaptation is to understand the relationship, check it internally, and leave room for recognition. A short everyday observation can stand on its own. When the user wants more depth, the separate explanation gives the actual terms and limits without turning the observation into a labeled diagram. Critical caveats remain explicit; neither a decoding paragraph nor a takeaway is compulsory.
 
-That sequence is our design, informed by source analysis. It is not a formula claimed by the writers. Warmth, humor, analogy, and confidence are separate choices; the skill can turn one down without losing the others. Understanding an explanation doesn't require agreeing with its recommendation. See the [craft notes](skills/lasso/references/craft.md) and [research ledger](docs/research.md) for inspected scenes, creator commentary, provenance and gaps. Full-script coverage is 3 of 44 catalogued episodes. Clip captions add partial evidence, not full episodes or verified visual performances. Full broadcast cuts were not reviewed or compared with the drafts.
+This revision follows Chris's feedback that the reader should make the association. It is a product choice, not a new finding attributed to the show's writers or evidence of improved learning. Warmth, humor, analogy, and confidence are separate choices; the skill can turn one down without losing the others. Understanding an explanation doesn't require agreeing with its recommendation. See the [craft notes](skills/lasso/references/craft.md) and [research ledger](docs/research.md) for inspected scenes, creator commentary, provenance and gaps. Full-script coverage is 3 of 44 catalogued episodes. Clip captions add partial evidence, not full episodes or verified visual performances. Full broadcast cuts were not reviewed or compared with the drafts.
 
 ## What stays intact
 
@@ -89,7 +107,9 @@ You can name the audience or length: “for a new developer,” “for our produ
 
 ## Evidence and readiness
 
-An [independent agent desk review](evals/independent-review-0.1.1/README.md) found no material fidelity or instruction-boundary failure in eight original cases and judged the explanation content suitable for a small user pilot. The same reviewer wrote and graded the cases; this was not blind testing or testing with people. Actual host invocation and user benefit remain unverified. The earlier [18-case Astra run](evals/results.md) is separate evidence, with its own limits. A fresh [follow-up comparison](evals/follow-up-comparison-0.1.1/README.md) found no useful advantage from an added rule, so the skill stayed unchanged and the first-use guidance improved instead.
+The [0.1.2 validation report](evals/results.md) separates structural checks and author-reviewed examples from actual model evaluation. Six new regression fixtures cover freestanding observations, requested depth, permissions, follow-ups, and consequential caveats. No fresh model or live-host generation has been run for this revision; the 24-case suite is prepared, not reported as passed.
+
+The [18-case Astra run](evals/results-0.1.1.md), [eight-case desk review](evals/independent-review-0.1.1/README.md), and [follow-up comparison](evals/follow-up-comparison-0.1.1/README.md) apply to 0.1.1. Their outputs remain preserved; they do not validate this changed response style. Human comprehension and conversational host invocation remain unverified.
 
 ## Free distribution, with clear limits
 

@@ -91,5 +91,41 @@
     "id": "unsupported-blame",
     "audience": "product manager",
     "input": "The job queue grew while an upstream partner returned HTTP 503 for 18 minutes. The report establishes no cause for the partner outage and assigns no responsibility. Support staff cannot change the partner service. Processing resumed when successful responses returned; no data-loss assessment is included."
+  },
+  {
+    "id": "spreadsheet-query-observation",
+    "audience": "product teammate",
+    "request": "Give me only the short Lasso take.",
+    "input": "In this hypothetical example, a spreadsheet query returns the rows and columns you describe instead of making you copy each matching cell by hand."
+  },
+  {
+    "id": "spreadsheet-query-depth",
+    "audience": "new developer",
+    "request": "Explain the mechanics too, including the limits.",
+    "input": "In this hypothetical spreadsheet tool, a query specifies the requested rows and columns. The tool returns a separate result and leaves the source cells unchanged. The query must use the supported syntax; an invalid query returns an error. No timing guarantee or list of supported operations is given."
+  },
+  {
+    "id": "read-only-observation",
+    "audience": "product teammate",
+    "request": "Just the short Lasso take.",
+    "input": "This hypothetical tool can retrieve permitted records but has no capability to create, change, or delete records."
+  },
+  {
+    "id": "read-only-false-boundary",
+    "audience": "product teammate",
+    "request": "Keep it short.",
+    "input": "The UI hides edit buttons. The server still accepts update requests with the tool's credential. The draft calls the tool read-only."
+  },
+  {
+    "id": "discovery-then-direct",
+    "audience": "product teammate",
+    "request": "The previous explanation said a window doesn't let me rearrange the room. Give me the literal meaning now, with no analogy.",
+    "input": "This hypothetical tool can retrieve permitted records but has no capability to create, change, or delete records. No claim is made about which records this user is permitted to retrieve."
+  },
+  {
+    "id": "short-take-material-limits",
+    "audience": "product teammate",
+    "request": "Give me a short Lasso take.",
+    "input": "In this hypothetical study of 40 teams, tool adoption was associated with a 10% lower median turnaround time. The teams chose whether to adopt it; treatment was not randomized. The 95% confidence interval ranged from -3% to 23% improvement. The study does not establish that the tool caused the difference."
   }
 ]

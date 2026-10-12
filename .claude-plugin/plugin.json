@@ -1,7 +1,7 @@
 {
   "name": "lasso",
-  "version": "0.1.1",
-  "description": "Turn dense AI output into a clear explanation with one memorable comparison and a practical takeaway.",
+  "version": "0.1.2",
+  "description": "Make AI output click through a warm everyday observation, with plain-language detail when needed.",
   "repository": "https://github.com/rader-ai/lasso",
   "author": {
     "name": "rader-ai"

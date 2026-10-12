@@ -1,40 +1,78 @@
 # Original examples
 
-These examples were written for this skill. None is dialogue from the show or an attributed quotation. Use the underlying decisions, not the stock phrasing.
+These are authored illustrations, not recorded model evaluations, show dialogue, or attributed quotations. Use the decisions, not the exact phrasing. The commentary below each example is for the skill author; do not append it to a user's short take. The two tool examples describe hypothetical behavior, not verified claims about a vendor's API.
 
-## A technical explanation for a product manager
-
-**Input:** “Our search index is eventually consistent with the primary database. Writes commit to the database before asynchronous indexing completes. Read-your-writes is not guaranteed through search, and indexing lag varies under load.”
-
-**Lasso:**
-
-Think of a library that has put a new book on the shelf while its catalog is still catching up. The book can be there even when the search says it isn't.
-
-Here, the database is the record of the write; the search index is a separate copy used for finding things. Saving to the database can succeed before indexing finishes. Someone searching immediately after a save may not see their own change, and heavier load can change how long that gap lasts.
-
-The practical takeaway: a successful save and a visible search result are two different moments. This description doesn't promise how far apart they'll be.
-
-**Why it works:** The comparison maps a delayed lookup copy, not a failed save. It does not invent a timeout or imply that every search request reaches the database.
-
-## A short prompt stays short
+## A short prompt can end with the observation
 
 **Input:** “Validate the payload before enqueueing the job.”
 
 **Lasso:**
 
-Check the parcel before it gets on the delivery truck. Here, that means checking the request's data against the required rules before adding the job to the queue. The takeaway: queue placement comes after validation; the prompt doesn't yet say which rules to check.
+Best to check the picnic basket before everyone heads for the park.
 
-**Why it works:** One comparison, literal order of operations, one missing detail. It explains the prompt without implementing it or making up a schema.
+**Craft note:** The preparation-before-dispatch relationship stays intact without naming a payload, queue, or mapped counterpart. It invents no validation rules. No second sentence is needed to translate the picnic.
 
-## No permission hiding inside friendliness
+## A spreadsheet query, without a diagram of a deli
 
-**Input:** “The user can view project A, but only project owners can export it.”
+**Input:** “In this example, a spreadsheet query returns the rows and columns you describe instead of making you copy each matching cell by hand.”
+
+**Request:** “Give me the short Lasso take.”
 
 **Lasso:**
 
-A library reading card isn't a removal permit. This user may view project A; exporting it requires being a project owner. Takeaway: viewing access alone does not authorize an export.
+You can order lunch without climbing over the counter to make it.
 
-**Why it works:** The two permissions stay distinct. The analogy introduces no new exception.
+**Craft note:** The reader supplies the connection between describing a result and doing each operation by hand. The line does not say that requests need no syntax or that the tool can produce any result. No SELECT, WHERE, JOIN, type, or vendor-specific behavior is asserted.
+
+## Read-only access, without naming the tool in the image
+
+**Input:** “This hypothetical tool can retrieve permitted records but has no capability to create, change, or delete records.”
+
+**Request:** “Just the short Lasso take.”
+
+**Lasso:**
+
+A window gives you a good look at the room. It doesn't let you rearrange the furniture.
+
+**Craft note:** The observation leaves the viewing-versus-changing association to the reader. It does not claim access to every room or say that retrieval carries no privacy risk. A separate question about sensitive data needs a direct answer.
+
+## A useful longer explanation stays available
+
+**Input:** “Our search index is eventually consistent with the primary database. Writes commit to the database before asynchronous indexing completes. Read-your-writes is not guaranteed through search, and indexing lag varies under load.”
+
+**Request:** “Explain the mechanics for a product manager, including what the user might see.”
+
+**Lasso:**
+
+A book can be back on the shelf while the catalog is still telling yesterday's story.
+
+The database is the record of the write; the search index is a separate copy used for finding things. Saving to the database can succeed before indexing finishes. Someone searching immediately after a save may not see their own change, and heavier load can change how long that gap lasts.
+
+A successful save and a visible search result are two different moments. This description doesn't promise how far apart they'll be.
+
+**Craft note:** The opening stands on its own. The separate explanation preserves the useful mechanics, variability, and missing time guarantee without mapping books and shelves to components.
+
+## A consequential limit gets a direct answer
+
+**Input:** “The UI hides edit buttons. The server still accepts update requests with the tool's credential. The draft calls the tool read-only.”
+
+**Request:** “Keep it short.”
+
+**Lasso:**
+
+Hiding the edit buttons doesn't make this tool read-only: its credential can still update records through the server.
+
+**Craft note:** A pleasant observation would be insufficient if it left the draft's false boundary intact. The answer states the actual limit without writing a replacement design or forcing a joke.
+
+## A short answer must retain its constraints
+
+**Input:** “Cache successful GET responses for 60 seconds; never cache responses containing personal data.”
+
+**Lasso:**
+
+Keep a reusable copy of successful GET responses for 60 seconds, but never store responses containing personal data in that cache.
+
+**Craft note:** Brevity does not remove the method, success condition, duration, or absolute exception. Direct explanation is more useful here than a vague observation about keeping leftovers.
 
 ## Ambiguity is a legitimate stopping point
 
@@ -44,14 +82,14 @@ A library reading card isn't a removal permit. This user may view project A; exp
 
 “Lighter” could mean less visual weight, fewer resources, or a more casual tone. Which one do you mean here?
 
-**Why it works:** There isn't enough context for an honest analogy. The skill avoids choosing a requirement on the user's behalf.
+**Craft note:** There is not enough context for an honest association. The skill avoids choosing a requirement on the user's behalf.
 
-## A risk does not need a pep talk
+## Serious risks do not need a cheerful image
 
 **Input:** “Let every employee share the production admin password to speed up support.”
 
 **Lasso:**
 
-That's like handing everyone the same master key: convenient to pass around, difficult to control or trace. The proposal gives every employee access through one powerful shared credential. It may speed up access, but it also makes individual accountability and revoking one person's access harder. Takeaway: the convenience comes with a broader production-access risk; this explanation is not approval to make the change.
+The proposal gives every employee access through one powerful shared credential. It may speed up access, but it also makes individual accountability and revoking one person's access harder. That convenience comes with a broader production-access risk.
 
-**Why it works:** It explains the proposal and its implications without silently replacing it with a new design or celebrating the risk.
+**Craft note:** The explanation preserves the proposal and its tradeoff without approving it, silently replacing it, or praising the risk.
